@@ -1,4 +1,5 @@
 puts "🏕 Seeding campers..."
+Camper.destroy_all
 camper1 = Camper.create(name: 'Caitlin', age: 8)
 camper2 = Camper.create(name: 'Lizzie', age: 9)
 camper3 = Camper.create(name: 'Tom', age: 12)
@@ -9,6 +10,7 @@ camper7 = Camper.create(name: 'Amanda', age: 9)
 camper8 = Camper.create(name: 'Nick', age: 12)
 
 puts "🏕 Seeding activities..."
+Activity.destroy_all
 activity1 = Activity.create(name: 'Archery', difficulty: 2)
 activity2 = Activity.create(name: 'Swimming', difficulty: 3)
 activity3 = Activity.create(name: 'Photography', difficulty: 2)
@@ -19,6 +21,7 @@ activity7 = Activity.create(name: 'Canoeing', difficulty: 3)
 activity8 = Activity.create(name: 'Windsurfing', difficulty: 5)
 
 puts "🏕 Seeding signups..."
+Signup.destroy_all
 Signup.create(camper_id: camper1.id, activity_id: activity2.id, time: 11)
 Signup.create(camper_id: camper1.id, activity_id: activity1.id, time: 12)
 Signup.create(camper_id: camper1.id, activity_id: activity4.id, time: 15)
